@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "echo",
+	"version": "${version}",
+	"name": "Echo",
+	"description": "Slows down early-game progression towards exploration and adventures!",
+	"authors": [
+		"SHADECORE"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/mod/echo",
+		"sources": "https://github.com/SHADECORE/Echo"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/echo/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.shadecore.echo.Echo"
+		],
+		"fabric-datagen": [
+			"net.shadecore.echo.EchoDataGenerator"
+		],
+		"client": [
+			"net.shadecore.echo.EchoClient"
+		]
+	},
+	"mixins": [
+		"echo.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
